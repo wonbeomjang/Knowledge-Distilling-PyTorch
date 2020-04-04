@@ -1,0 +1,9 @@
+{
+  "model_name": "resnet101",
+  "teacher_name": "resnet158",
+  "alpha": 0.95,
+  "learning_rate": 1e-1,
+  "temperature": 6,
+  "num_epochs": 30,
+  "batch_size": 128
+}
