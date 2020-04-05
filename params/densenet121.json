@@ -1,6 +1,6 @@
 {
-  "model_name": "resnet101",
-  "teacher_name": "resnet101",
+  "model_name": "densenet121",
+  "teacher_name": "densenet121",
   "alpha": 0,
   "lr": 1e-3,
   "temperature": 6,

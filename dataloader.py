@@ -6,6 +6,7 @@ from torch.utils.data.dataset import random_split
 
 def get_loader(image_size, batch_size):
     transform = transforms.Compose([
+        transforms.Grayscale(3),
         transforms.Resize(image_size),
         transforms.ToTensor()
     ])
@@ -23,6 +24,7 @@ def get_loader(image_size, batch_size):
 
 def get_test_loader(image_size, batch_size):
     transform = transforms.Compose([
+        transforms.Grayscale(3),
         transforms.Resize(image_size),
         transforms.ToTensor()
     ])

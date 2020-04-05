@@ -19,6 +19,7 @@ class AverageMeter:
         self.avg = self.sum / self.count
 
 
+
 class Params:
     """Class that loads hyperparameters from a json file.
     Example:

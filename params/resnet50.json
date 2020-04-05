@@ -1,8 +1,8 @@
 {
-  "model_name": "resnet18",
+  "model_name": "resnet50",
   "teacher_name": "resnet50",
-  "alpha": 0.95,
-  "lr": 1e-1,
+  "alpha": 0,
+  "lr": 1e-3,
   "temperature": 6,
   "num_epochs": 30,
   "batch_size": 128
