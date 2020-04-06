@@ -4,6 +4,6 @@
   "alpha": 0.95,
   "lr": 1e-1,
   "temperature": 6,
-  "num_epochs": 30,
+  "num_epochs": 90,
   "batch_size": 128
 }

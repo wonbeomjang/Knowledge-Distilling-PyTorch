@@ -16,8 +16,8 @@ def get_loader(image_size, batch_size):
     validation_length = len(dataset) - train_length
 
     train_dataset, validation_dataset = random_split(dataset, (train_length, validation_length))
-    train_loader = DataLoader(train_dataset, batch_size, True)
-    validation_loader = DataLoader(validation_dataset, batch_size, True)
+    train_loader = DataLoader(train_dataset, batch_size, False)
+    validation_loader = DataLoader(validation_dataset, batch_size, False)
 
     return train_loader, validation_loader
 

@@ -41,8 +41,6 @@ class Model(nn.Module):
         loss_avg.reset()
         acc_avg.reset()
 
-        self.epoch += 1
-
         for step, (images, targets) in enumerate(tqdm(data_loader, desc=f'Train Epoch {self.epoch}')):
             images: torch.Tensor = images.to(self.device)
             targets: torch.Tensor = targets.to(self.device)
@@ -57,6 +55,7 @@ class Model(nn.Module):
             preds = preds.argmax(dim=1)
             loss_avg.update(loss.mean().item())
             acc_avg.update((preds == targets).sum().item()/images.shape[0])
+        self.epoch += 1
 
         return loss_avg.avg, acc_avg.avg
 

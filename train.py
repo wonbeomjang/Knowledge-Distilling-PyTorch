@@ -29,7 +29,7 @@ if __name__ == '__main__':
     teacher_params = Params(os.path.join(args.params_dir, f'{student_params.teacher_name}.json'))
 
     student = Model(args.num_classes, student_params, args.epoch)
-    student.load_params(os.path.join(args.checkpoint_dir, student_params.model_name, f'{args.epoch}.pth'))
+    student.load_params(os.path.join(args.checkpoint_dir, student_params.model_name, f'{args.epoch-1}.pth'))
 
     teacher = Model(args.num_classes, teacher_params)
     teacher.load_params(os.path.join(args.checkpoint_dir, teacher_params.model_name, f'final.pth'))

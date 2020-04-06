@@ -25,7 +25,7 @@ parser.add_argument('--is_distill', type=bool, default=True)
 args = parser.parse_args()
 
 if __name__ == '__main__':
-    params = Params(os.path.join(args.params_dir, f'{args.student_name}.json'))
+    params = Params(os.path.join(args.params_dir, f'{args.model_name}.json'))
     acc = AverageMeter()
     net = Model(args.num_classes, params)
     net.load_params(os.path.join(args.checkpoint_dir, params.model_name, f'final.pth'))
@@ -33,8 +33,6 @@ if __name__ == '__main__':
     writer = SummaryWriter(args.log_path)
     criterion = loss_kd
     test_loader = get_test_loader(args.image_size, 1024)
-    num_correct = 0
-    num_data = 0
 
     for images, targets in tqdm(test_loader, desc=f'{params.model_name} Testing...'):
         images: torch.Tensor = images.to(net.device)
@@ -43,4 +41,4 @@ if __name__ == '__main__':
 
         acc.update((preds == targets).sum().item()/images.shape[0])
 
-    print(f'{acc.avg * 100}%')
+    print(f'{acc.avg * 100:.4f}%')
