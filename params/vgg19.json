@@ -1,0 +1,9 @@
+{
+  "model_name": "vgg19",
+  "teacher_name": "vgg19",
+  "alpha": 0,
+  "lr": 1e-3,
+  "temperature": 3,
+  "num_epochs": 90,
+  "batch_size": 32
+}

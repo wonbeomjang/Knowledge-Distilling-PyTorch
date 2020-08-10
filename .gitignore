@@ -195,3 +195,7 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.gitignore.io/api/vim,linux,macos,pycharm,windows,visualstudiocode
+
+checkpoints
+!final.pth
+logs

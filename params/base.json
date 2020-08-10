@@ -1,0 +1,9 @@
+{
+  "model_name": "base",
+  "teacher_name": "resnet18",
+  "alpha": 0.9,
+  "lr": 1e-3,
+  "temperature": 20,
+  "num_epochs": 90,
+  "batch_size": 32
+}
